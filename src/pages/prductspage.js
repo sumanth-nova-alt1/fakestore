@@ -61,7 +61,6 @@ function destructureButtons(paramdata,dispatch){
 
 export default function Productspage(){
 
-    const [data, setData] = useState()
     const dispatch = useDispatch();
     const selector = useSelector(countread)
     
@@ -70,9 +69,6 @@ export default function Productspage(){
         await dispatch(initialfetch())
         };
         loadSpots();
-        if(selector.products){
-        setData(destructureData(selector));
-        }
     }, [dispatch]);
 
 
